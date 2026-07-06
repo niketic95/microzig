@@ -1,0 +1,15 @@
+.{
+    .name = .examples_silabs_efr32fg23x,
+    .fingerprint = 0x99b28c14efd25ff5,
+    .version = "0.0.0",
+    .minimum_zig_version = "0.15.1",
+    .dependencies = .{
+        .microzig = .{ .path = "../../.." },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}

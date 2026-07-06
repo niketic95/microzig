@@ -35,6 +35,7 @@ const port_list: []const struct {
     .{ .name = "msp430", .dep_name = "port/texasinstruments/msp430" },
     .{ .name = "mspm0", .dep_name = "port/texasinstruments/mspm0" },
     .{ .name = "tm4c", .dep_name = "port/texasinstruments/tm4c" },
+    .{ .name = "efr32fg23x", .dep_name = "port/silabs/efr32fg23x" },
 };
 
 pub fn build(b: *Build) void {
@@ -75,6 +76,7 @@ pub const PortSelect = struct {
     msp430: bool = false,
     mspm0: bool = false,
     tm4c: bool = false,
+    efr32fg23x: bool = false,
 
     pub const all: PortSelect = blk: {
         var ret: PortSelect = undefined;
