@@ -43,6 +43,7 @@
         .@"port/texasinstruments/mspm0" = .{ .path = "port/texasinstruments/mspm0", .lazy = true },
         .@"port/texasinstruments/tm4c" = .{ .path = "port/texasinstruments/tm4c", .lazy = true },
         .@"port/wch/ch32v" = .{ .path = "port/wch/ch32v", .lazy = true },
+        .@"port/silabs/efr32fg23x" = .{ .path = "port/silabs/efr32fg23x", .lazy = true },
     },
     .paths = .{
         "README.md",
