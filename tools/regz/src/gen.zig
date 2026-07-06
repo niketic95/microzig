@@ -128,7 +128,7 @@ fn write_device_file(
 
     try writer.writeByte(0);
 
-    var ast = try std.zig.Ast.parse(arena, to_zero_sentinel(buf.written()), .{});
+    var ast = try std.zig.Ast.parse(arena, to_zero_sentinel(buf.written()), .zig);
     defer ast.deinit(arena);
 
     if (ast.errors.len > 0) {
@@ -198,7 +198,7 @@ fn write_peripherals_files(io: std.Io, db: *Database, arena: Allocator, dir: std
         });
 
         try writer.writeByte(0);
-        var ast = try std.zig.Ast.parse(arena, to_zero_sentinel(periph_content.written()), .{});
+        var ast = try std.zig.Ast.parse(arena, to_zero_sentinel(periph_content.written()), .zig);
         defer ast.deinit(arena);
 
         if (ast.errors.len > 0) {
