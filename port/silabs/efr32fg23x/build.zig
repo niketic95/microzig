@@ -34,10 +34,7 @@ pub fn init(dep: *std.Build.Dependency) ?Self {
         },
         .hal = .{ .root_source_file = b.path("src/hal/hal.zig") },
 
-        .linker_script = .{
-            .generate = .memory_regions,
-            .file = b.path("linker.ld"),
-        },
+        .linker_script = .{},
     };
 
     const chip_efr32fg23b021f512im48: microzig.Target = .{
@@ -59,10 +56,7 @@ pub fn init(dep: *std.Build.Dependency) ?Self {
         },
         .hal = .{ .root_source_file = b.path("src/hal/hal.zig") },
 
-        .linker_script = .{
-            .generate = .memory_regions,
-            .file = b.path("linker.ld"),
-        },
+        .linker_script = .{},
     };
 
     return .{
